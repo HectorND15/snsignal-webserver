@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+          integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+          crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+            integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+            crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/js/leaflet-heat.js"></script>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title>RSSI</title>
+</head>
+<body onload="heatmapping()">
+    <div class="content">
+        <div class="toobar">
+            <div class="operator">
+                <label for="x">Operador</label>
+                <select name="operator" id="operatorSelect">
+                    <option>TIGO</option>
+                    <option>CLARO</option>
+                    <option>otros</option>
+                </select>
+            </div>
+            <div class="network">
+                <label for="x">Red</label>
+                <select name="operator" id="networkSelect">
+                    <option>4G</option>
+                    <option>3G</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div id="map-template"></div>
+    </div>
+    <script src="/js/main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body .content .toobar{
+    margin: 2px 5px;
+    padding: 10px 0;
+    position: fixed;
+    z-index: 950;
+    width: auto;
+    display: flex;
+    background-color: rgba(95, 158, 160, 0.7);
+    border-radius: 5px;
+}
+
+body .content .toobar .operator{
+    margin:  0 20px;
+    text-align: center;
+}
+
+body .content .toobar .network{
+    margin:  0 20px;
+    text-align: center;
+}
+
+body .content #map-template {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 900;
+}
