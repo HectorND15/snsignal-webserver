@@ -31,6 +31,16 @@ udp.on('message', (msg) => {
         db.pool.query(query, function (err){
             if(err) console.log(err)
         })
+    }else if(data[0] == 'Claro'){
+        let query = `INSERT INTO CLARO (networkType, latitude, longitude, rssi) VALUES ('${data[1].split(' ')[0]}','${data[2]}','${data[3]}','${data[4].split(' ')[0]}')`
+        db.pool.query(query, function (err){
+            if(err) console.log(err)
+        })
+    } else{
+        let query = `INSERT INTO DEFAULT (networkType, latitude, longitude, rssi) VALUES ('${data[1].split(' ')[0]}','${data[2]}','${data[3]}','${data[4].split(' ')[0]}')`
+        db.pool.query(query, function (err){
+            if(err) console.log(err)
+        })
     }
 })
 udp.bind(udpPort,udpHost);
