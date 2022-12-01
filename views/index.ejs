@@ -24,20 +24,51 @@
         <div class="toobar">
             <div class="operator">
                 <label for="x">Operador</label>
-                <select name="operator" id="operatorSelect">
+                <select name="operator" id="operatorSelect" onchange="heatmapping()">
                     <option>TIGO</option>
                     <option>CLARO</option>
-                    <option>otros</option>
+                    <option>OTROS</option>
                 </select>
             </div>
             <div class="network">
                 <label for="x">Red</label>
-                <select name="operator" id="networkSelect">
+                <select name="operator" id="networkSelect" onchange="heatmapping()">
                     <option>4G</option>
                     <option>3G</option>
                 </select>
             </div>
 
+        </div>
+        <div class="rssi">
+             <div class="signal" id="goodSignal">
+                 <div class="color"></div>
+                 <div class="text" style="display: ">
+                     <span>Señal Buena</span>
+                     <span style="font-size: 13px; justify-content: space-between;" id="goodSignalRssi"></span>
+                 </div>
+             </div>
+            <div class="signal" id="regular Signal">
+                <div class="color" style="background-color:yellow"></div>
+                <div class="text">
+                    <span>Señal regular</span>
+                    <span  style="font-size: 13px; justify-content: space-between"  id="regularSignalRssi"></span>
+                </div>
+            </div>
+
+            <div class="signal" id="poorSignal">
+                <div class="color" style="background-color:green "></div>
+                <div class="text">
+                    <span>Mala Señal</span>
+                    <span style="font-size: 13px; justify-content: space-between"  id="poorSignalRssi"></span>
+                </div>
+            </div>
+            <div class="signal" id="noSignal">
+                <div class="color" style="background-color: blue"></div>
+                <div class="text">
+                    <span>Sin Señal</span>
+                    <span  style="font-size: 13px; text-align: right;"  id="noSignalRssi"></span>
+                </div>
+            </div>
         </div>
 
         <div id="map-template"></div>

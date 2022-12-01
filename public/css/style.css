@@ -25,6 +25,43 @@ body .content .toobar .network{
     text-align: center;
 }
 
+body .content .rssi{
+    margin: 2px 5px;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 950;
+    width: auto;
+    background-color: rgba(94, 141, 111, 0.85);
+    border-radius: 5px;
+}
+
+body .content .rssi .signal{
+    padding: 10px 0;
+    margin:  0 20px;
+    display: flex;
+    align-items: center;
+}
+
+body .content .rssi .signal .color{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+body .content .rssi .signal .text{
+    ;
+}
+
+body .content .rssi .signal .text span{
+
+}
+
+
+
 body .content #map-template {
     height: 100%;
     width: 100%;
